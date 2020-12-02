@@ -20,6 +20,7 @@ var boton = document.getElementsByClassName("active")[0]
 console.log(boton)
 if (getCookie("token") != "") {
     boton.textContent = "Jugar"
+    boton.href = "my_turn.html"
 }
 else {
     boton.textContent = "Login"
