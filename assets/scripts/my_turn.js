@@ -269,21 +269,21 @@ async function recibeEstado() {
 }
 
 async function enviaValoresPost(datos) {
-    return await fetch("http://protected-scrubland-81841.herokuapp.com/estado_partida",
+    return await fetch("https://protected-scrubland-81841.herokuapp.com/estado_partida",
             { method:"POST", body:JSON.stringify(datos), headers:{"Content-type":"application/json", "Authorization":`Bearer ${getCookie('token')}`} })
         .then(response =>{ return response.json() })
 }
 
 const enviaValoresGet = datos =>{
 
-    return fetch("http://protected-scrubland-81841.herokuapp.com/estado_tablero",
+    return fetch("https://protected-scrubland-81841.herokuapp.com/estado_tablero",
          { method:"GET", headers:{"Content-type":"application/json", "Authorization":`Bearer ${getCookie('token')}`} })
         .then(responde =>{ return responde.json() })
 }
 
 const creaNuevaPartida = datos =>{
 
-    return fetch("http://protected-scrubland-81841.herokuapp.com/crear",
+    return fetch("https://protected-scrubland-81841.herokuapp.com/crear",
          { method:"GET", headers:{"Content-type":"application/json", "Authorization":`Bearer ${getCookie('token')}`} })
         .then(responde =>{ return responde.json() })
 }
@@ -321,7 +321,7 @@ var boton_logout = document.getElementsByClassName("logout")[0]
 boton_logout.addEventListener("click", cerrar_sesion)
 async function cerrar_sesion(){
 
-  respuesta = await fetch("http://protected-scrubland-81841.herokuapp.com/logout",
+  respuesta = await fetch("https://protected-scrubland-81841.herokuapp.com/logout",
        { method:"POST", body:JSON.stringify({'token':`${getCookie('token')}`}), headers:{"Content-type":"application/json", "Authorization":`Bearer ${getCookie('token')}`} })
       .then(responde =>{ return responde.json() })
       .then(responde => console.log(responde['msg']))
@@ -486,7 +486,7 @@ function VolverEstadoInicial( event ){
 
     const enviaJugada = datos =>{
 
-        return fetch("http://protected-scrubland-81841.herokuapp.com/jugar",
+        return fetch("https://protected-scrubland-81841.herokuapp.com/jugar",
              { method:"POST", body:JSON.stringify(datos), headers:{"Content-type":"application/json"} })
             .then(responde =>{ return responde.json() })
     }
