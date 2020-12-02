@@ -67,7 +67,3 @@ function getCookie(c_name) {
     }
     return "";
 }
-
-if (getCookie("token") != "") {
-    window.location.href = "my_turn.html";
-}
