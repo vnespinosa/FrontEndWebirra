@@ -477,7 +477,7 @@ function MostrarTerritoriosAtacables( event ) {
     doc2.innerHTML = '<h2>Modo de juego: ' + modo + '</h2>' ;
 }
 
-function VolverEstadoInicial( event ){
+async function VolverEstadoInicial( event ){
     borrarCuadro()
     for (let i = 0; i < clases_territorios.length; i++){
         var territorio = document.getElementsByClassName(clases_territorios[i])[0]
@@ -487,11 +487,13 @@ function VolverEstadoInicial( event ){
     const enviaJugada = datos =>{
 
         return fetch("https://protected-scrubland-81841.herokuapp.com/jugar",
-             { method:"POST", body:JSON.stringify(datos), headers:{"Content-type":"application/json"} })
+             { method:"POST", body:JSON.stringify(datos), headers:{"Content-type":"application/json" , "Authorization":`Bearer ${getCookie('token')}`} })
             .then(responde =>{ return responde.json() })
     }
 
-    const respuesta_consulta = enviaJugada(respuesta_usuario)  //Hacer post de la jugada
+    const respuesta_consulta = await enviaJugada(respuesta_usuario)
+    await console.log('lo que recibo de la cnosulta: ' + JSON.stringify(respuesta_consulta))
+      //Hacer post de la jugada
     //console.log("Respuesta servidor: " + JSON.parse(respuesta_consulta)["estado"])
     modo = "inicial"
     doc2 = document.getElementById("modo");
