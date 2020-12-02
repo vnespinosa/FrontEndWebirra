@@ -1,0 +1,145 @@
+.mediaViewInfo {
+    --web-view-name: Registro;
+    --web-view-id: Registro;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+.header {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: #006AA3;
+    padding: 20px 10px;
+    border-bottom-style: solid;
+    text-align: right;
+    z-index: 10;
+}
+
+.header-right {
+    float: right;
+}
+
+body { 
+    background-color: rgba(223,83,83,1);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.bold_logo {
+    font-weight:bolder;
+    font-size: 50px;
+}
+
+.header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header a.active {
+    background-color: #DF5353;
+    color: white;
+    
+}
+
+.login {
+    overflow: hidden;
+    font-size: 50px;
+    text-align: center;
+    --web-view-name: Acerca-de;
+    --web-view-id: Acerca-de;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+input[type=text], input[type=password] {
+    width: 75%;
+    height: 10%;
+    padding: 12px 20px;
+    margin: 8% 20%;
+    display: list-item;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 0px 10%;
+    margin: 2% 0%;
+}
+
+
+.botonregistro {
+    background-color: #2ab9cc;
+    height: 7%;
+    width: 20%;
+    position: absolute;
+    top: 80%;
+    left: 37%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    line-height: 45px;
+    border-radius: 4px;
+    padding: 0px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#containerRegistro{
+    background-color: #B8C6CC;
+    font-size: 20px;
+    margin: 40px;
+    border-radius: 25px;
+    border: rgba(0,48,73,1);
+    border-style: solid;
+    margin: 1.5% 25%;
+    width: 45%;
+    height: 76%;
+    position: absolute;
+    top: 20%;
+}
+
+Usuario{
+    top: 25%;
+    left: 1%;
+    position: absolute;
+    font-size: 20;
+}
+
+Mail{
+    top: 43%;
+    left: 1%;
+    position: absolute;
+    font-size: 20;
+}
+
+Clave{
+    top: 62%;
+    left: 1%;
+    position: absolute;
+    font-size: 20;
+}

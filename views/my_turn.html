@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<title>My turn</title>
+</head>
+<link rel="stylesheet" href="../assets/styles/my_turn.css">
+<body>
+	<div class="header">
+		<a href="my_turn.html" class="logo"> Estás jugando <br><br>
+			<span class="bold_logo">RISK UC!</span>
+		</a>
+		<div class="header-right">
+			<a href="estadisticas.html">Estadisticas </a>
+			<a href="Nosotros.html">Sobre Nosotros</a>
+			<a href="como_jugar.html">Cómo jugar</a>
+			<a href="acerca-de.html">Acerca de </a>
+			<a class="logout">Logout </a>
+		</div>
+
+	</div>
+
+<div class="juego">
+
+	<div class= "mapa">
+		<svg viewBox="0 0 820 788">
+			<polygon class= "ingenieria" points= "475, 493 521, 417 635, 454 604, 531"> <title> Ingeniería </title> </polygon>
+
+			<polygon class= "const_civil" points= "302, 499 361, 420 403, 442 355, 517"> <title> Construcción Civil </title> </polygon>
+
+			<polygon class= "enfermeria" points= "363, 417 382, 382 429, 402 415, 424 393, 414 384, 421"> <title> Enfermería </title> </polygon>
+
+			<polygon class= "luksic" points= "540, 586 495, 562 489, 568 479, 564 496, 540 502, 543 501, 550 550, 571"> <title> Luksic </title> </polygon>
+
+			<polygon class= "educacion" points= "187, 547 167, 510 266, 400 297, 409"> <title> Educación </title> </polygon>
+
+			<polygon class= "hall" points= "302, 412 242, 384 253, 370 236, 341 244, 332 331, 366"> <title> Hall </title> </polygon>
+
+			<polygon class= "humanidades" points= "176, 372 83, 336 133, 276 213, 313"> <title> Humanidades </title> </polygon>
+
+			<polygon class= "college" points= "695, 384 654, 360 677, 320 725, 331"> <title> College </title> </polygon>
+
+			<polygon class= "salud" points= "734, 304 712, 285 743, 244 758, 244 773, 265"> <title> Ciencias de la Salud </title> </polygon>
+
+			<polygon class= "mate" points= "648, 276 623, 269 657, 208 680, 222"> <title> Matemáticas </title> </polygon>
+
+			<polygon class= "fis_quim" points= "594, 372 491, 341 544, 268 634, 294"> <title> Física y química </title> </polygon>
+
+			<polygon class= "comercial" points= "222, 276 185, 257 261, 167 300, 192"> <title> Comercial </title> </polygon>
+
+			<polygon class= "capilla" points= "406, 310 291, 272 346, 196 468, 229"> <title> Capilla </title> </polygon>
+
+			<polygon class= "sociales" points= "598, 235 355, 178 384, 144 622, 192"> <title> Sociales </title> </polygon>
+
+			<polygon class= "agronomia" points= "316, 181 206, 144 274, 94 379, 119"> <title> Agronomía </title> </polygon>
+
+			<polygon class= "magna" points= "477, 141 445, 93 487, 90 492, 123 478, 147"> <title> Aula Magna </title> </polygon>
+
+			<polygon class= "futbol" points= "733, 122 615, 59 648, 23 769, 78"> <title> Cancha de fútbol </title> </polygon>
+
+			<polygon class= "gimnasio" points= "555, 83 520, 71 554, 29 595, 54"> <title> Gimnasio </title> </polygon>
+
+			<polygon class= "cancha1" points= "713, 183 650, 141 678, 111 743, 144"> <title> Cancha de basketball </title> </polygon>
+
+			<polygon class= "cancha2" points= "636, 147 557, 136 574, 95 649, 108"> <title> Cancha de tenis  </title> </polygon>
+		</svg>
+	</div>
+
+	<div class= "titulo3"> Jugada Actual </div>
+	<li id="logs"></li>
+
+	<!--
+	<div class="tropas">
+		<li class="item_tropas"> Tropas totales: 21 </li>
+		<li class="item_tropas"> Alumnos: 1 </li>
+		<li class="item_tropas"> Profes: 1 </li>
+		<li class="item_tropas"> Ayudantes: 2 </li>
+	</div>
+	-->
+
+	<div class="botones">
+		<button class="boton" id="atacar">Atacar <i class="fas fa-chess-knight"></i></button>
+		<button class="boton" id="reordenar">Mover tropas <i class="fas fa-suitcase-rolling"></i></button>
+		<button class="boton" id="terminar">Enviar jugada <i class="fas fa-calendar-check"></i></button>
+		<button class="boton" id="turno">Pasar Turno <i class="fas fa-download"></i></button>
+	</div>
+
+	<div id="modo">
+		<h2>Modo de juego: Iniciando partida</h2>
+	</div>
+
+	<div class= "Puntajes">
+		<div class= "titulo"> Territorios conquistados </div>
+		<ol class= jugadores>
+			<div class= "jugador1">
+				<!--<li>John</li>
+				<li class="puntaje">[13]</li> -->
+				<div class="list_territorios1">
+				</div>
+			</div>
+
+			<div class="jugador2">
+				<!--<li>Laura</li>
+				<li class="puntaje">[20]</li> -->
+
+				<div class="list_territorios2">
+				</div>
+			</div>
+
+			<div class= "jugador3">
+				<!--<li>Pedro</li>
+				<li class="puntaje">[8]</li> -->
+
+				<div class="list_territorios3">
+				</div>
+			</div>
+			<!--
+			<div class="linea1"></div>
+			<div class="linea2"></div>
+			<div class="linea3"></div>
+			-->
+		</ol>
+	</div>
+
+	<div class="Progreso">
+		<div class="titulo2"> Misión secreta:</div>
+		<div class="mision">No asignada todavía </div>
+		<ol><progress> </progress>
+
+			<porcentaje></porcentaje>
+			<resto>% Completado</resto>
+		</ol>
+	</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../node_modules/requirejs/require.js"></script>
+<script type="module" src="../assets/modules/FileSaver.js"></script>
+<script src="../assets/scripts/my_turn.js"></script>
+</body>
+</html>

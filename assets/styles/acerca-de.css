@@ -1,0 +1,87 @@
+.mediaViewInfo {
+    --web-view-name: Acerca de;
+    --web-view-id: Acerca de;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+#acerca-de {
+    background-color: rgba(223,83,83,1);
+    overflow: hidden;
+    font-size: 50px;
+    text-align: center;
+    --web-view-name: Acerca-de;
+    --web-view-id: Acerca-de;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+
+body { 
+    background-color: rgba(223,83,83,1);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+overflow: hidden;
+position: fixed;
+width: 100%;
+background-color: #006AA3;
+padding: 20px 10px;
+border-bottom-style: solid;
+text-align: right;
+z-index: 10;
+}
+
+.header a {
+float: left;
+color: white;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px; 
+line-height: 25px;
+border-radius: 4px;
+margin: 5px;
+}
+
+.header a.logo {
+font-size: 25px;
+font-weight: bold;
+text-align: left;
+}
+.bold_logo {
+font-weight:bolder;
+font-size: 50px;
+}
+
+.header a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.header a.active {
+background-color: #DF5353;
+color: white;
+
+}
+
+.header-right {
+float: right;
+}
+
+#bajada{
+    background-color: #B8C6CC;
+    font-size: 20px;
+    margin: 40px;
+    border-radius: 25px;
+    border: rgba(0,48,73,1);
+    border-style: solid;
+    }
+.titulo{
+        text-align: left;
+        text-decoration: underline;
+        font-weight: bold;
+        word-break: break-all;
+}
